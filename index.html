@@ -5,6 +5,7 @@
 <link href='css/sweetalert.css' rel='stylesheet'/>
 </head>
 <script>
+function isOdd(num) { return num % 2;}
 function Gece(){
 var css = 'html {background: white;' +
 '-webkit-filter: invert(100%); '+
@@ -18,15 +19,8 @@ if (!window.counter) {
 	sessionStorage.setItem("görünüm", "gece");
 } else {
 	window.counter ++;
-	if (window.counter == 2) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
-	if (window.counter == 3) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
-	if (window.counter == 4) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
-	if (window.counter == 5) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
-	if (window.counter == 6) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
-	if (window.counter == 7) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
-	if (window.counter == 8) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
-	if (window.counter == 9) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
-	if (window.counter == 10) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+	if (isOdd(window.counter) == 0) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+	if (isOdd(window.counter) == 1) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
 }
 style.type = 'text/css'
 if (style.styleSheet){
