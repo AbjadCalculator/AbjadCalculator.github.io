@@ -5,6 +5,44 @@
 <link href='css/sweetalert.css' rel='stylesheet'/>
 </head>
 <script>
+
+function Gece(){
+
+var css = 'html {background: black;' +
+'-webkit-filter: invert(100%); '+
+'-moz-filter: invert(100%); '+
+'-o-filter: invert(100%); '+
+'-ms-filter: invert(100%)}';
+
+var head = document.getElementsByTagName('head')[0];
+var style = document.createElement('style');
+
+if (!window.counter) {
+	window.counter = 1;
+	sessionStorage.setItem("görünüm", "gece");
+} else {
+	window.counter ++;
+	if (window.counter == 2) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+	if (window.counter == 3) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
+	if (window.counter == 4) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+	if (window.counter == 5) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
+	if (window.counter == 6) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+	if (window.counter == 7) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
+	if (window.counter == 8) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+	if (window.counter == 9) {sessionStorage.setItem("görünüm", "gece"); var css ='html {-webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%);}'}
+	if (window.counter == 10) {sessionStorage.removeItem("görünüm"); var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%);}'}
+}
+
+style.type = 'text/css'
+if (style.styleSheet){
+	style.styleSheet.cssText = css;
+} else {
+	style.appendChild(document.createTextNode(css));
+}
+
+head.appendChild(style);
+}
+	
 	window.onload = function(){
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
@@ -70,7 +108,7 @@ function(isConfirm){
 	<body>
 <br></br>
 <br></br>
-		<center><a value="Refresh Page" onClick="window.location.reload()"><img src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></center>
+<center><a value="Refresh Page" onClick="window.location.reload()"><img onmouseover="Gece()" src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></center>
 <br></br>
 Results:
   <p id="abjad"></p>
