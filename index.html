@@ -17,7 +17,7 @@
 	<button id="kopyala">Sonuçları Kopyala</button></td>
   </tr>
   <tr>
-    <td><center><a id="kopyala"><img src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></center></td>
+    <td><center><a id="copyala"><img src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></center></td>
   </tr>
 </table></center>
 	
@@ -55,10 +55,14 @@ $("#box").on('keyup',function(){
     
 	var mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of words: " + words(inputValue) + "\n" + "Count of letters: " + letters(inputValue);
   
-	document.querySelector("#kopyala").onclick = function() {
+document.querySelector("#kopyala").onclick = function() {
     var result = copyToClipboard(mesaj);
     console.log("copied?", result);
-	};
+};
+document.querySelector("#copyala").onclick = function() {
+    var result = copyToClipboard(mesaj);
+    console.log("copied?", result);
+};
 });
 </script>
 </body>
