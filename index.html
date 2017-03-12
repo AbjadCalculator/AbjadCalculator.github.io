@@ -6,6 +6,8 @@
 </head>
 <body>
 <script>
+	window.onload = function () {
+
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
 	return clipboardData.setData("Text", text);
@@ -69,6 +71,7 @@ function(isConfirm){
     document.getElementById("words").innerHTML = "Count of words: " + words(inputValue);
     document.getElementById("letters").innerHTML = "Count of letters: " + letters(inputValue);
 });
+		};
 </script>
   Results:
   <p id="abjad"></p>
