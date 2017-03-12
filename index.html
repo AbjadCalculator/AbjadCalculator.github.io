@@ -1,8 +1,18 @@
 <html>
 <head>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
-<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script>
+</head>
+<body>
+
+<textarea id="box" rows="6" cols="75"></textarea>
+<br>
+<p id="abjad"></p>
+<p id="words"></p>
+<p id="letters"></p>
+<button id="kopyala">Sonuçları Kopyala</button>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
 	return clipboardData.setData("Text", text);
@@ -33,7 +43,7 @@ $("#box").on('keyup',function(){
 	document.getElementById("words").innerHTML = "Count of words: " + words(inputValue);
 	document.getElementById("letters").innerHTML = "Count of letters: " + letters(inputValue);
     
-	mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of words: " + words(inputValue) + "\n" + "Count of letters: " + letters(inputValue);
+	var mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of words: " + words(inputValue) + "\n" + "Count of letters: " + letters(inputValue);
   
 	document.querySelector("#kopyala").onclick = function() {
     var result = copyToClipboard(mesaj);
@@ -41,14 +51,6 @@ $("#box").on('keyup',function(){
 	};
 });
 </script>
-</head>
-<body>
-<textarea id="box" rows="6" cols="75"></textarea>
-<br>
-<p id="abjad"></p>
-<p id="words"></p>
-<p id="letters"></p>
-<button id="kopyala">Sonuçları Kopyala</button>
 </body>
 
 </html>
