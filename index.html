@@ -102,10 +102,6 @@ function abjad (string) {
 	return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
 }
 
-function nineteen(number){
-	if (number % 19 === 0) { return 1; }else{ return 0; }
-}
-
 function startwork(event){
 	box = document.getElementById("box");
 	if ( box === document.activeElement ){}else{
@@ -128,11 +124,16 @@ function copyToClipboard(text) {
 	}
 }
 
+function nineteen(number){
+	if (number % 19 === 0) { return 1; }else{ return 0; }
+}
+
 $("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
 	
-	number = abjad(inputValue)
-	ebced = if(nineteen(number)){ abjad(inputValue) " = 19 × "abjad(inputValue)/19;  }else{ abjad(inputValue) }
+	number = abjad(inputValue);
+	rslt = nineteen(number);
+	ebced = if(rslt){ abjad(inputValue) + " = 19 × " + abjad(inputValue)/19;  }else{ abjad(inputValue) }
 	
 	document.getElementById("abjad").innerHTML = "Abjad Value: " + ebced;
 	document.getElementById("letters").innerHTML = "Letters: " + letters(inputValue);
