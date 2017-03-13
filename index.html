@@ -127,13 +127,11 @@ function copyToClipboard(text) {
 $("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
 	
-	abc = abjad(inputValue);
-	ltr = letters(inputValue);
-	wrd = words(inputValue);
-
-	if (abc % 19 === 0) {var ebced = abc + " = 19 × " + abc/19;}else{var ebced = abc);}
-	if (ltr % 19 === 0) {var harf = ltr + " = 19 × " + ltr/19;}else{var harf = ltr;}
-	if (wrd % 19 === 0) {var kelime = wrd + " = 19 × " + wrd/19;}else{var kelime = wrd;}
+  if (abjad(inputValue) % 19 === 0) {var ebced = abjad(inputValue) + " = 19 × " + abjad(inputValue)/19;}else{var ebced = abjad(inputValue);}
+  
+  if (letters(inputValue) % 19 === 0) {var harf = letters(inputValue) + " = 19 × " + letters(inputValue)/19;}else{var harf = letters(inputValue);}
+    
+  if (words(inputValue) % 19 === 0) {var kelime = words(inputValue) + " = 19 × " + words(inputValue)/19;}else{var kelime = words(inputValue);}
   
 	document.getElementById("abjad").innerHTML = "Abjad Value: " + ebced;
 	document.getElementById("letters").innerHTML = "Letters: " + harf;
