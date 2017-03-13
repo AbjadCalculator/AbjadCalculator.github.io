@@ -36,28 +36,6 @@ body{
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 
-function startwork(event){
-	box = document.getElementById("box");
-	if ( box === document.activeElement ){}else{
-		box.focus();
-	}
-}
-
-function copyToClipboard(text) {
-	if (window.clipboardData && window.clipboardData.setData) {
-		return clipboardData.setData("Text", text);
-	}
-	else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
-		textarea = document.createElement("textarea");
-  		textarea.textContent = text;
-  		textarea.style.position = "fixed";
-  		document.body.appendChild(textarea); textarea.select();
-  		try {return document.execCommand("copy")}
-  		catch (ex) {console.warn("Copy to clipboard failed.", ex); return false;}
-		finally {document.body.removeChild(textarea)}
-	}
-}
-
 function getSum(total,num){return total + num};
 
 function val(yazı,harf,değer){
@@ -66,7 +44,7 @@ function val(yazı,harf,değer){
 	if (text.indexOf(harf) > -1){
 		sonuc = text.split(harf).join(değer).match(rgxp).map(Number).reduce(getSum)
 	}else{
-		sonuc=0
+		sonuc = 0
 	};
 	return sonuc;
 }
@@ -124,6 +102,32 @@ function abjad (string) {
 	return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
 }
 
+function nineteen(number){
+	if (number % 19 === 0) { return 1; }else{ return 0; }
+}
+
+function startwork(event){
+	box = document.getElementById("box");
+	if ( box === document.activeElement ){}else{
+		box.focus();
+	}
+}
+
+function copyToClipboard(text) {
+	if (window.clipboardData && window.clipboardData.setData) {
+		return clipboardData.setData("Text", text);
+	}
+	else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+		textarea = document.createElement("textarea");
+  		textarea.textContent = text;
+  		textarea.style.position = "fixed";
+  		document.body.appendChild(textarea); textarea.select();
+  		try {return document.execCommand("copy")}
+  		catch (ex) {console.warn("Copy to clipboard failed.", ex); return false;}
+		finally {document.body.removeChild(textarea)}
+	}
+}
+
 $("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
 	
@@ -131,7 +135,7 @@ $("#box").on('keyup',function(){
 	document.getElementById("letters").innerHTML = "Letters: " + letters(inputValue);
 	document.getElementById("words").innerHTML = "Words: " + words(inputValue);
 	
-	mesaj = "Abjad Value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
+	mesaj = "Abjad Value: " + if(nineteen( abjad(inputValue) )){ abjad(inputValue) " = 19 × "abjad(inputValue)/19;  }else{ abjad(inputValue) } + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
 
 	document.querySelector("#kopyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
