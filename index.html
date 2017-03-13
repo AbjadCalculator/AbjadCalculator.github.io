@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Abjad Value Calculator</title>
+<title>Abjad Value Calculator</title>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
 <style>
 textarea{
@@ -13,6 +13,7 @@ body{
 }
 </style>
 </head>
+
 <body>
 <center><table>
   <tr>
@@ -50,10 +51,18 @@ function copyToClipboard(text) {
 	}
 }
 
-function getSum(total,num) {return total + num};
-function val(yazı,harf,değer){ rgxp = new RegExp(değer,'gim'); text = yazı.toLowerCase();
-if (text.indexOf(harf) > -1){ sonuc = text.split(harf).join(değer).match(rgxp).map(Number).reduce(getSum) }else{ sonuc=0 };
-return sonuc;}
+function getSum(total,num){return total + num};
+
+function val(yazı,harf,değer){
+	rgxp = new RegExp(değer,'gim');
+	text = yazı.toLowerCase();
+	if (text.indexOf(harf) > -1){
+		sonuc = text.split(harf).join(değer).match(rgxp).map(Number).reduce(getSum)
+	}else{
+		sonuc=0
+	};
+	return sonuc;
+}
 
 function letters (string) { return string.match(/[a-z]/gim).length }
 function words(string) { return string.split(/\s+/).length }
@@ -110,10 +119,13 @@ function abjad (string) {
 
 $("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
-	document.getElementById("abjad").innerHTML = "The Gematrical value of all letters: " + abjad(inputValue);
-	document.getElementById("letters").innerHTML = "Count of letters: " + letters(inputValue);
-	document.getElementById("words").innerHTML = "Count of words: " + words(inputValue);
-	mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
+	
+	document.getElementById("abjad").innerHTML = "Abjad Value: " + abjad(inputValue);
+	document.getElementById("letters").innerHTML = "Letters: " + letters(inputValue);
+	document.getElementById("words").innerHTML = "Words: " + words(inputValue);
+	
+	mesaj = "Abjad Value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
+
 	document.querySelector("#kopyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
 		console.log("copied?", result);
@@ -125,5 +137,4 @@ $("#box").on('keyup',function(){
 });
 </script>
 </body>
-
 </html>
