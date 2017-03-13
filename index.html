@@ -138,7 +138,7 @@ $("#box").on('keyup',function(){
 	document.getElementById("letters").innerHTML = "Letters: " + letters(inputValue);
 	document.getElementById("words").innerHTML = "Words: " + words(inputValue);
 	
-	mesaj = "Abjad Value: " + abjad(inputValue)/19 + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
+	mesaj = "Abjad Value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
 
 	document.querySelector("#kopyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
