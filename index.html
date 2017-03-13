@@ -124,15 +124,14 @@ function copyToClipboard(text) {
 	}
 }
 
-function nineteen(number){
-	if (number % 19 === 0) { return 1; }else{ return 0; }
-}
-
 $("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
 	
-	number = abjad(inputValue);
-	rslt = nineteen(number);
+function nineteen(number){
+	if (number % 19 === 0) { return 1; }else{ return 0; }
+}
+	numara = abjad(inputValue);
+	rslt = nineteen(numara);
 	ebced = if(rslt){ abjad(inputValue)  }else{ abjad(inputValue) }
 	
 	document.getElementById("abjad").innerHTML = "Abjad Value: " + ebced;
