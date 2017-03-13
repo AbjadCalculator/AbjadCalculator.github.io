@@ -71,7 +71,7 @@ function val(yazı,harf,değer){
 	return sonuc;
 }
 
-function letters (string) { return string.match(/^[\u0621-\u064A]+$/gim).length }
+function letters (string) { return string.match(^[\u0621-\u064A]+$).length }
 function words(string) { return string.split(/\s+/).length }
 function abjad (string) {
 	ء = val(string,'ء','1');
