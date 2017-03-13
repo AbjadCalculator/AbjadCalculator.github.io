@@ -1,4 +1,4 @@
-<html>
+<html onkeydown='startwork(event)'>
 <head>
 <title>Abjad Value Calculator</title>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
@@ -35,6 +35,15 @@ body{
 	
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
+
+function startwork(event){
+	box = document.getElementById("box");
+	//key = event.keyCode;
+	if ( box === document.activeElement ){}else{
+		//box.value = "";
+		box.focus();
+	}
+}
 
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
