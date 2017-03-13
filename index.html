@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Abjad Value Calculator</title>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
 <style>
 textarea{
@@ -22,8 +23,8 @@ body{
 	<textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
 	<br>
 	<p id="abjad"></p>
-	<p id="words"></p>
 	<p id="letters"></p>
+	<p id="words"></p>
 	<button id="kopyala">Sonuçları Kopyala: 123'e Tıkla</button></td>
   </tr>
   <tr>
@@ -33,17 +34,19 @@ body{
 	
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
+
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
-	return clipboardData.setData("Text", text);
-	}else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+		return clipboardData.setData("Text", text);
+	}
+	else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
 		textarea = document.createElement("textarea");
-  	textarea.textContent = text;
-  	textarea.style.position = "fixed";
-  	document.body.appendChild(textarea); textarea.select();
-  	try {return document.execCommand("copy")}
-  	catch (ex) {console.warn("Copy to clipboard failed.", ex); return false;}
-  	finally {document.body.removeChild(textarea)}
+  		textarea.textContent = text;
+  		textarea.style.position = "fixed";
+  		document.body.appendChild(textarea); textarea.select();
+  		try {return document.execCommand("copy")}
+  		catch (ex) {console.warn("Copy to clipboard failed.", ex); return false;}
+		finally {document.body.removeChild(textarea)}
 	}
 }
 
@@ -54,7 +57,8 @@ return sonuc;}
 
 function letters (string) { return string.match(/[a-z]/gim).length }
 function words(string) { return string.split(/\s+/).length }
-function abjad (string) { ء = val(string,'ء','1');
+function abjad (string) {
+ء = val(string,'ء','1');
 ا = val(string,'ا','1');
 آ = val(string,'آ','1');
 ٱ = val(string,'ٱ','1');
@@ -101,17 +105,16 @@ function abjad (string) { ء = val(string,'ء','1');
 ض = val(string,'ض','800');
 ظ = val(string,'ظ','900');
 غ = val(string,'غ','1000');
-
-    return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
- }
+return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
+}
 
 $("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
 	document.getElementById("abjad").innerHTML = "The Gematrical value of all letters: " + abjad(inputValue);
-	document.getElementById("words").innerHTML = "Count of words: " + words(inputValue);
 	document.getElementById("letters").innerHTML = "Count of letters: " + letters(inputValue);
+	document.getElementById("words").innerHTML = "Count of words: " + words(inputValue);
     
-	var mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of words: " + words(inputValue) + "\n" + "Count of letters: " + letters(inputValue);
+	var mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
   
 document.querySelector("#kopyala").onclick = function() {
     var result = copyToClipboard(mesaj);
