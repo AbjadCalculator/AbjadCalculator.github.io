@@ -25,7 +25,7 @@ body{
 	<p id="abjad"></p>
 	<p id="letters"></p>
 	<p id="words"></p>
-	<button id="kopyala">Sonuçları Kopyala: 123'e Tıkla</button></td>
+	<button id="kopyala">Copy Results: Click to 123</button></td>
   </tr>
   <tr>
     <td><center><a id="copyala"><img src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></center></td>
@@ -58,54 +58,54 @@ return sonuc;}
 function letters (string) { return string.match(/[a-z]/gim).length }
 function words(string) { return string.split(/\s+/).length }
 function abjad (string) {
-ء = val(string,'ء','1');
-ا = val(string,'ا','1');
-آ = val(string,'آ','1');
-ٱ = val(string,'ٱ','1');
-أ = val(string,'أ','1');
-إ = val(string,'إ','1');
-ب = val(string,'ب','2');
-پ = val(string,'پ','2');
-ج = val(string,'ج','3');
-چ = val(string,'چ','3');
-د = val(string,'د','4');
-ه = val(string,'ه','5');
-ة = val(string,'ة','5');
-و = val(string,'و','6');
-ؤ = val(string,'ؤ','6');
-ز = val(string,'ز','7');
-ژ = val(string,'ژ','7');
-ح = val(string,'ح','8');
-ط = val(string,'ط','9');
-ی = val(string,'ی','10');
-ي = val(string,'ي','10');
-ئ = val(string,'ئ','10');
-ى = val(string,'ى','10');
-ک = val(string,'ک','20');
-ك = val(string,'ك','20');
-گ = val(string,'گ','20');
-ڭ = val(string,'ڭ','20');
-ل = val(string,'ل','30');
-م = val(string,'م','40');
-ن = val(string,'ن','50');
-س = val(string,'س','60');
-ع = val(string,'ع','70');
-ف = val(string,'ف','80');
-ڢ = val(string,'ڢ','80');
-ڤ = val(string,'ڤ','80');
-ص = val(string,'ص','90');
-ق = val(string,'ق','100');
-ڨ = val(string,'ڨ','100');
-ر = val(string,'ر','200');
-ش = val(string,'ش','300');
-ت = val(string,'ت','400');
-ث = val(string,'ث','500');
-خ = val(string,'خ','600');
-ذ = val(string,'ذ','700');
-ض = val(string,'ض','800');
-ظ = val(string,'ظ','900');
-غ = val(string,'غ','1000');
-return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
+	ء = val(string,'ء','1');
+	ا = val(string,'ا','1');
+	آ = val(string,'آ','1');
+	ٱ = val(string,'ٱ','1');
+	أ = val(string,'أ','1');
+	إ = val(string,'إ','1');
+	ب = val(string,'ب','2');
+	پ = val(string,'پ','2');
+	ج = val(string,'ج','3');
+	چ = val(string,'چ','3');
+	د = val(string,'د','4');
+	ه = val(string,'ه','5');
+	ة = val(string,'ة','5');
+	و = val(string,'و','6');
+	ؤ = val(string,'ؤ','6');
+	ز = val(string,'ز','7');
+	ژ = val(string,'ژ','7');
+	ح = val(string,'ح','8');
+	ط = val(string,'ط','9');
+	ی = val(string,'ی','10');
+	ي = val(string,'ي','10');
+	ئ = val(string,'ئ','10');
+	ى = val(string,'ى','10');
+	ک = val(string,'ک','20');
+	ك = val(string,'ك','20');
+	گ = val(string,'گ','20');
+	ڭ = val(string,'ڭ','20');
+	ل = val(string,'ل','30');
+	م = val(string,'م','40');
+	ن = val(string,'ن','50');
+	س = val(string,'س','60');
+	ع = val(string,'ع','70');
+	ف = val(string,'ف','80');
+	ڢ = val(string,'ڢ','80');
+	ڤ = val(string,'ڤ','80');
+	ص = val(string,'ص','90');
+	ق = val(string,'ق','100');
+	ڨ = val(string,'ڨ','100');
+	ر = val(string,'ر','200');
+	ش = val(string,'ش','300');
+	ت = val(string,'ت','400');
+	ث = val(string,'ث','500');
+	خ = val(string,'خ','600');
+	ذ = val(string,'ذ','700');
+	ض = val(string,'ض','800');
+	ظ = val(string,'ظ','900');
+	غ = val(string,'غ','1000');
+	return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
 }
 
 $("#box").on('keyup',function(){
@@ -113,17 +113,15 @@ $("#box").on('keyup',function(){
 	document.getElementById("abjad").innerHTML = "The Gematrical value of all letters: " + abjad(inputValue);
 	document.getElementById("letters").innerHTML = "Count of letters: " + letters(inputValue);
 	document.getElementById("words").innerHTML = "Count of words: " + words(inputValue);
-    
-	var mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
-  
-document.querySelector("#kopyala").onclick = function() {
-    var result = copyToClipboard(mesaj);
-    console.log("copied?", result);
-};
-document.querySelector("#copyala").onclick = function() {
-    var result = copyToClipboard(mesaj);
-    console.log("copied?", result);
-};
+	mesaj = "Abjad value: " + abjad(inputValue) + "\n" + "Count of letters: " + letters(inputValue) + "\n" + "Count of words: " + words(inputValue);
+	document.querySelector("#kopyala").onclick = function() {
+		var result = copyToClipboard(mesaj);
+		console.log("copied?", result);
+	};
+	document.querySelector("#copyala").onclick = function() {
+		var result = copyToClipboard(mesaj);
+		console.log("copied?", result);
+	};
 });
 </script>
 </body>
