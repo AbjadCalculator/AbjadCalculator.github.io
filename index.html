@@ -117,7 +117,7 @@ function abjad (string) {
 	return ء+ا+آ+ٱ+أ+إ+ب+پ+ج+چ+د+ه+ة+و+ؤ+ز+ژ+ح+ط+ی+ي+ئ+ى+ک+ك+گ+ڭ+ل+م+ن+س+ع+ف+ڢ+ڤ+ص+ق+ڨ+ر+ش+ت+ث+خ+ذ+ض+ظ+غ
 }
 
-$("#box").on('KeyPress',function(){
+$("#box").on('keypress',function(){
 	inputValue = document.getElementById("box").value;
 	
 	document.getElementById("abjad").innerHTML = "Abjad Value: " + abjad(inputValue);
