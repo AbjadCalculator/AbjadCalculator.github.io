@@ -50,7 +50,15 @@ function val(yazı,harf,değer){
 }
 
 function letters (string) { return string.match(/[ء-ي]/igm).length }
-function words(string) { return string.split(/\s+/).length }
+function words(string){
+	y = string.split(/\s+/).filter(
+		function(string){
+			word = string.match(/[ء-ي]+/igm);
+			return word && word[0].length > 0;
+		}
+	);
+	return y.length;
+}
 function abjad (string) {
 	ء = val(string,'ء','1');
 	ا = val(string,'ا','1');
