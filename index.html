@@ -23,14 +23,20 @@ textarea {
 	font-size: 12pt;
 	direction: rtl;
 	width: 50%;
-	margin: 0 auto;
-	padding: 15px;
-	margin: 5px auto;
+	margin-left: 25%;
 }
 	
-th {font-size: initial;}
-p {font-size: initial;}
-button {font-size: initial;}
+#baslik {
+	font-size: large;
+	text-align: center;
+}
+	
+#text {
+	margin-left: 25%;	
+}
+
+p {font-size: 13pt;}
+button {font-size: 13pt;}
 	
 @media only screen and (max-width:361px) {
 th {font-size: x-large;}
@@ -43,14 +49,16 @@ textarea {font-size: 30pt;}
 </head>
 
 <body>
-<p>Abjad Value Calculator</p>
+<p id="baslik">Abjad Value Calculator</p>
 <textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
 <br>
-<p id="abjad"></p>
-<p id="letters"></p>
-<p id="words"></p>
-<button id="kopyala">Copy Results: Click to 123</button>
-	
+<div id="text">
+	<p id="abjad"></p>
+	<p id="letters"></p>
+	<p id="words"></p>
+	<button id="kopyala">Copy Results: Click to 123</button>
+</div>
+
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 
