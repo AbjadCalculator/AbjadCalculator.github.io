@@ -14,10 +14,6 @@ body {
 	background-position: center;
 }
 	
-table {
-	width: 95%;
-}
-	
 textarea {
 	background-color: #d4efff;
 	font-size: 12pt;
@@ -25,20 +21,33 @@ textarea {
 	width: 50%;
 	margin-left: 25%;
 }
-	
+
+#text {
+	margin-left: 25%;	
+}
+
 #baslik {
 	font-size: large;
 	text-align: center;
-}
-	
-#text {
-	margin-left: 25%;	
 }
 
 p {font-size: 13pt;}
 button {font-size: 13pt;}
 	
 @media only screen and (max-width:361px) {
+	
+textarea {
+	background-color: #d4efff;
+	font-size: 12pt;
+	direction: rtl;
+	width: 90%;
+	margin-left: 5%;
+}
+
+#text {
+	margin-left: 5%;	
+}
+	
 th {font-size: x-large;}
 p {font-size: -webkit-xxx-large;}
 button {font-size: xx-large;}
@@ -56,7 +65,7 @@ textarea {font-size: 30pt;}
 	<p id="abjad"></p>
 	<p id="letters"></p>
 	<p id="words"></p>
-	<button id="kopyala">Copy Results: Click to 123</button>
+	<button id="kopyala"> Copy Results </button>
 </div>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
