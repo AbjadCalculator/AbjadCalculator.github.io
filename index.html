@@ -6,46 +6,58 @@
 <meta content='Online Abjad/Gematrical/Numerical Value Calculator' property='og:description'/>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
 <style>
-body{
+	
+main {
+  margin: 20px 0;
+  padding: 10px;
+}
+
+main div {
+  margin: 0 auto;
+  color: white;
+  padding: 15px;
+  margin: 5px auto;
+}
+
+body {
 	background-color: azure;
 }
-table{
+	
+table {
 	width: 95%;
 }
-textarea{
+	
+textarea {
 	background-color: #d4efff;
 	font-size: 12pt;
 	direction: rtl;
 }
+	
 th {font-size: x-large;}
 p {font-size: -webkit-xxx-large;}
 button {font-size: xx-large;}
+	
 @media only screen and (max-width:961px) {
-textarea{font-size: 30pt;}
+	
+textarea {font-size: 30pt;}
+	
 }
 </style>
 </head>
 
 <body>
-<center><table>
-  <tr>
-    <th>Abjad Value Calculator</th>
-  </tr>
-  <tr>
-    <center><td>
+<main>
+  <div>Abjad Value Calculator</div>
+  <div>
 	<textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
 	<br>
 	<p id="abjad"></p>
 	<p id="letters"></p>
 	<p id="words"></p>
 	<button id="kopyala">Copy Results: Click to 123</button>
-   </td></center>
-  </tr>
-  <tr>
-    <td><center><a id="copyala"><img src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></center></td>
-  </tr>
-</table></center>
-	
+   </div>
+  <div><a id="copyala"><img src="pic/abjad_png.png" alt="Ebced Hesapla" border="0"></img></a></div>
+</main>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 
