@@ -6,23 +6,7 @@
 <meta content='Online Abjad/Gematrical/Numerical Value Calculator' property='og:description'/>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
 <style>
-	
-main {
-  padding: 0 10px;
-}
 
-main div {
-  margin: 0 auto;
-  padding: 15px;
-  margin: 5px auto;
-}
-
-main div:nth-child(1) {
-  width: 50%;
-}
-main div:nth-child(2) {
-  width: 50%;
-}
 body {
 	background-color: azure;
 	background-image: url(pic/abjad_png.png);
@@ -38,6 +22,10 @@ textarea {
 	background-color: #d4efff;
 	font-size: 12pt;
 	direction: rtl;
+	width: 50%;
+	margin: 0 auto;
+	padding: 15px;
+	margin: 5px auto;
 }
 	
 th {font-size: initial;}
@@ -55,17 +43,14 @@ textarea {font-size: 30pt;}
 </head>
 
 <body>
-<main>
-  <div>Abjad Value Calculator</div>
-  <div>
-	<textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
-	<br>
-	<p id="abjad"></p>
-	<p id="letters"></p>
-	<p id="words"></p>
-	<button id="kopyala">Copy Results: Click to 123</button>
-   </div>
-</main>
+<p>Abjad Value Calculator</p>
+<textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
+<br>
+<p id="abjad"></p>
+<p id="letters"></p>
+<p id="words"></p>
+<button id="kopyala">Copy Results: Click to 123</button>
+	
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
 
@@ -181,10 +166,6 @@ $("#box").on('keyup',function(){
 	mesaj = "Abjad Value: " + ebced + "\n" + "Count of letters: " + harf + "\n" + "Count of words: " + kelime;
 
 	document.querySelector("#kopyala").onclick = function() {
-		var result = copyToClipboard(mesaj);
-		console.log("copied?", result);
-	};
-	document.querySelector("#copyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
 		console.log("copied?", result);
 	};
