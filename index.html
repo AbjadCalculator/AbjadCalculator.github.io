@@ -132,7 +132,7 @@ function copyToClipboard(text) {
 	}
 }
 
-$("#box").on('keydown',function(){
+$("#box").on('keyup',function(){
 	inputValue = document.getElementById("box").value;
 	
   if (abjad(inputValue) % 19 === 0) {var ebced = abjad(inputValue) + " = 19 × " + abjad(inputValue)/19;}else{var ebced = abjad(inputValue);}
