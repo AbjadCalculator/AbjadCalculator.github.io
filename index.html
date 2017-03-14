@@ -14,11 +14,19 @@ main {
 
 main div {
   margin: 0 auto;
-  color: white;
   padding: 15px;
   margin: 5px auto;
 }
 
+main div:nth-child(1) {
+  width: 200px;
+}
+main div:nth-child(2) {
+  width: 400px;
+}
+main div:nth-child(3) {
+  width: 125px;
+}
 body {
 	background-color: azure;
 }
@@ -33,12 +41,14 @@ textarea {
 	direction: rtl;
 }
 	
+th {font-size: large;}
+p {font-size: large;}
+button {font-size: large;}
+	
+@media only screen and (max-width:361px) {
 th {font-size: x-large;}
 p {font-size: -webkit-xxx-large;}
 button {font-size: xx-large;}
-	
-@media only screen and (max-width:961px) {
-	
 textarea {font-size: 30pt;}
 	
 }
