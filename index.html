@@ -204,11 +204,11 @@ $("#box").on('keyup',function(){
     
   if (words(inputValue) % 19 === 0) {var kelime = words(inputValue) + " = 19 × " + words(inputValue)/19;}else{var kelime = words(inputValue);}
   
-	document.getElementById("abjad").innerHTML = "Abjad Value: " + ebced;
-	document.getElementById("letters").innerHTML = "Count of Letters: " + harf;
-	document.getElementById("words").innerHTML = "Count of Words: " + kelime;
+	document.getElementById("abjad").innerHTML = "ABJAD value: " + ebced;
+	document.getElementById("letters").innerHTML = "Count of LETTERs: " + harf;
+	document.getElementById("words").innerHTML = "Count of WORDs: " + kelime;
 	
-	mesaj = "Abjad Value: " + ebced + "\n" + "Count of Letters: " + harf + "\n" + "Count of Words: " + kelime;
+	mesaj = "ABJAD value: " + ebced + "\n" + "Count of LETTERs: " + harf + "\n" + "Count of WORDs: " + kelime;
 
 	document.querySelector("#kopyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
