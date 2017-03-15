@@ -8,26 +8,33 @@
 <meta content='Online Abjad/Gematrical/Numerical Value Calculator' property='og:description'/>
 <link href='pic/favicon.ico' rel='icon' type='image/x-icon'/>
 <style>
-
 body {
 	background-color: azure;
 }
-	
+
+#back {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.07;
+    left: 50%;
+    margin-left: -120px;
+}
+
 textarea {
 	background-color: #d4efff;
 	font-size: 12pt;
 	direction: rtl;
 	width: 50%;
 	margin-left: 25%;
+	background-image: url(pic/abjadback.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 0%;
+	opacity: 0.9;
 }
 
 #text {
 	margin-left: 25%;
-	margin-left: 25%;
-	background-image: url(pic/abjad.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: 50% 0%;
 }
 
 #baslik {
@@ -57,7 +64,6 @@ textarea {
 
 #text {
 	margin-left: 10%;
-	background-position: 80% 0%;
 }
 	
 }
@@ -71,15 +77,6 @@ textarea {
 
 #text {
 	margin-left: 5%;
-	background-position: 85% 0%;
-}
-
-}
-
-@media only screen and (max-width: 375px) {
-
-#text {
-	background-position: 95% 0%;
 }
 
 }
@@ -87,9 +84,10 @@ textarea {
 </head>
 
 <body>
-<p id="baslik">Abjad Value Calculator</p>
+<p id="baslik">Abjad Value Calculator:</p>
 <textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
 <br>
+<div id="back"><img src="pic/abjad_png.png"></img></div>
 <div id="text">
 	<p id="abjad"></p>
 	<p id="letters"></p>
