@@ -34,6 +34,7 @@ textarea {
 
 textarea:focus {
 	background-image:none;
+	background-color: rgb(212, 255, 219);
 }
 
 #text {
@@ -211,17 +212,11 @@ $("#box").on('keyup',function(){
     
   if (words(inputValue) % 19 === 0) {var kelime = words(inputValue) + " = 19 × " + words(inputValue)/19;}else{var kelime = words(inputValue);}
 	
-if (abjad(inputValue) = null){
-	document.getElementById("abjad").innerHTML = "";
-	document.getElementById("letters").innerHTML = "";
-	document.getElementById("words").innerHTML = "";
-	mesaj = "";
-}else{
 	document.getElementById("abjad").innerHTML = "ABJAD Value: " + ebced;
 	document.getElementById("letters").innerHTML = "Number of LETTERS: " + harf;
 	document.getElementById("words").innerHTML = "Number of WORDS: " + kelime;
+
 	mesaj = "ABJAD Value: " + ebced + "\n" + "Number of LETTERS: " + harf + "\n" + "Number of WORDS: " + kelime;
-}
 
 	document.querySelector("#kopyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
