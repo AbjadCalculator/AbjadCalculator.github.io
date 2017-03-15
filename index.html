@@ -37,30 +37,37 @@ textarea {
 
 p {font-size: 13pt;}
 button {font-size: 13pt;}
+
+@media only screen and (max-width: 768px) {
+
+textarea {font-size: 14pt;}
+th {font-size: 14pt;}
+p {font-size: 14pt;}
+button {font-size: 14pt;}
+textarea {font-size: 14pt;}
 	
-@media only screen and (max-width: 761px) {
-	
-body {
-	background-color: blue;
 }
 
+@media only screen and (min-width: 425px) and (max-width: 768px) {
+
 textarea {
-	background-color: #d4efff;
-	font-size: 12pt;
-	direction: rtl;
+	width: 80%;
+	margin-left: 10%;
+}
+
+#text {margin-left: 5%}
+	
+}
+
+@media only screen and (max-width: 425px) {
+
+textarea {
 	width: 90%;
 	margin-left: 5%;
 }
 
-#text {
-	margin-left: 5%;	
-}
-	
-th {font-size: x-large;}
-p {font-size: -webkit-xxx-large;}
-button {font-size: xx-large;}
-textarea {font-size: 30pt;}
-	
+#text {margin-left: 5%}
+
 }
 </style>
 </head>
