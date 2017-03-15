@@ -209,7 +209,6 @@ if(inputValue) {
 	if (abjad(inputValue) % 19 === 0) {var ebced = abjad(inputValue) + " = 19 × " + abjad(inputValue)/19;}else{var ebced = abjad(inputValue);}
 	if (letters(inputValue) % 19 === 0) {var harf = letters(inputValue) + " = 19 × " + letters(inputValue)/19;}else{var harf = letters(inputValue);}
 	if (words(inputValue) % 19 === 0) {var kelime = words(inputValue) + " = 19 × " + words(inputValue)/19;}else{var kelime = words(inputValue);}
-	
 	$("#abjad").html("ABJAD Value: " + ebced);
 	$("#letters").html("Number of LETTERS: " + harf);
 	$("#words").html("Number of WORDS: " + kelime);
@@ -218,7 +217,7 @@ if(inputValue) {
 	$("#abjad").html("");
 	$("#letters").html("");
 	$("#words").html("");
-	mesaj == "";
+	mesaj === "";
 };
 	document.querySelector("#kopyala").onclick = function() {
 		var result = copyToClipboard(mesaj);
