@@ -128,7 +128,49 @@ function val(yazı,harf,değer){
 	return sonuc;
 }
 
-function letters (string) { return string.match(/[ء-يﻻﻹﻷﻵ]/igm).length }
+function letters(string) { return string.match(/[ء-يﻻﻹﻷﻵ]/igm).length };
+
+function ا(string) {
+	ﻻ = string.match(/[ﻻ]/igm).length;
+	ﻹ = string.match(/[ﻹ]/igm).length;
+	ﻷ = string.match(/[ﻷ]/igm).length;
+	ﻵ = string.match(/[ﻵ]/igm).length;
+	return string.match(/[ءاآٱأإ]/igm).length + ﻻ + ﻹ + ﻷ + ﻵ
+}
+function ب(string) { return string.match(/[بپ]/igm).length }
+function ج(string) { return string.match(/[جچ]/igm).length }
+function د(string) { return string.match(/[د]/igm).length }
+function ه(string) { return string.match(/[هة]/igm).length }
+function و(string) { return string.match(/[وؤ]/igm).length }
+function ز(string) { return string.match(/[زژ]/igm).length }
+function ح(string) { return string.match(/[ح]/igm).length }
+function ط(string) { return string.match(/[ط]/igm).length }
+function ی(string) { return string.match(/[یيئى]/igm).length }
+function ک(string) { return string.match(/[کكگڭ]/igm).length }
+function ل(string) { 
+	ﻻ = string.match(/[ﻻ]/igm).length;
+	ﻹ = string.match(/[ﻹ]/igm).length;
+	ﻷ = string.match(/[ﻷ]/igm).length;
+	ﻵ = string.match(/[ﻵ]/igm).length;
+	return string.match(/[ل]/igm).length + ﻻ + ﻹ + ﻷ + ﻵ
+}
+function م(string) { return string.match(/[م]/igm).length }
+function ن(string) { return string.match(/[ن]/igm).length }
+function س(string) { return string.match(/[س]/igm).length }
+function ع(string) { return string.match(/[ع]/igm).length }
+function ف(string) { return string.match(/[فڢڤ]/igm).length }
+function ص(string) { return string.match(/[ص]/igm).length }
+function ق(string) { return string.match(/[قڨ]/igm).length }
+function ر(string) { return string.match(/[ر]/igm).length }
+function ش(string) { return string.match(/[ش]/igm).length }
+function ت(string) { return string.match(/[ت]/igm).length }
+function ث(string) { return string.match(/[ث]/igm).length }
+function خ(string) { return string.match(/[خ]/igm).length }
+function ذ(string) { return string.match(/[ذ]/igm).length }
+function ض(string) { return string.match(/[ض]/igm).length }
+function ظ(string) { return string.match(/[ظ]/igm).length }
+function غ(string) { return string.match(/[غ]/igm).length }
+
 function words(string){
 	y = string.split(/\s+/).filter(
 		function(string){
@@ -138,6 +180,7 @@ function words(string){
 	);
 	return y.length;
 }
+
 function abjad (string) {
 	ء = val(string,'ء','1');
 	ا = val(string,'ا','1');
@@ -186,6 +229,7 @@ function abjad (string) {
 	ض = val(string,'ض','800');
 	ظ = val(string,'ظ','900');
 	غ = val(string,'غ','1000');
+
 	ﻻ = val(string,'ﻻ','31');
 	ﻹ = val(string,'ﻹ','31');
 	ﻷ = val(string,'ﻷ','31');
