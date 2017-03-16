@@ -103,7 +103,7 @@ textarea {background-image: url(pic/abc.png)}
 
 <body>
 <p id="baslik">Abjad Value Calculator:</p>
-<textarea placeholder="...Start typing" id="box" rows="6" cols="75" pattern="/[ء-ي]/igm"></textarea>
+<textarea placeholder="...Start typing" id="box" rows="6" cols="75"></textarea>
 <br>
 <div id="back"><img id="book" src="pic/book arabic.png"></img></div>
 <div id="text">
@@ -195,6 +195,10 @@ function startwork(event){
 		box.focus();
 	}
 }
+
+$('#box').on('input', function (event) { 
+    this.value = this.value.replace(/[^ء-ي]/igm, '');
+});
 
 function copyToClipboard(text) {
 	if (window.clipboardData && window.clipboardData.setData) {
