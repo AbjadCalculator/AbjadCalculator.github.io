@@ -27,7 +27,7 @@ body {
 textarea {
 	background-color: #d4efff;
 	border-radius: 2px;
-	font-size: 12pt;
+	font-size: 14pt;
 	direction: rtl;
 	width: 50%;
 	margin-left: 25%;
@@ -57,7 +57,6 @@ button {font-size: 13pt;}
 
 @media only screen and (max-width: 768px) {
 
-textarea {font-size: 14pt;}
 th {font-size: 14pt;}
 p {font-size: 14pt;}
 button {font-size: 14pt;}
@@ -68,6 +67,7 @@ textarea {font-size: 14pt;}
 @media only screen and (min-width: 425px) and (max-width: 768px) {
 
 textarea {
+	font-size: 14pt;
 	width: 80%;
 	margin-left: 10%;
 }
@@ -81,6 +81,7 @@ textarea {
 @media only screen and (max-width: 425px) {
 
 textarea {
+	font-size: 15pt;
 	width: 90%;
 	margin-left: 5%;
 }
@@ -212,7 +213,7 @@ function copyToClipboard(text) {
 
 $("#box").keyup( function(){
 	inputValue = $(this).val();
-if(inputValue) {
+if( abjad(inputValue) ) {
 	if (abjad(inputValue) % 19 === 0) {var ebced = abjad(inputValue) + " = 19 × " + abjad(inputValue)/19;}else{var ebced = abjad(inputValue);}
 	if (letters(inputValue) % 19 === 0) {var harf = letters(inputValue) + " = 19 × " + letters(inputValue)/19;}else{var harf = letters(inputValue);}
 	if (words(inputValue) % 19 === 0) {var kelime = words(inputValue) + " = 19 × " + words(inputValue)/19;}else{var kelime = words(inputValue);}
