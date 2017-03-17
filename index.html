@@ -264,15 +264,78 @@ function copyToClipboard(text) {
 }
 
 $("#box").keyup( function(){
+
 	inputValue = $(this).val();
-if( abjad(inputValue) ) {
-	if (abjad(inputValue) % 19 === 0) {var ebced = abjad(inputValue) + " = 19 × " + abjad(inputValue)/19;}else{var ebced = abjad(inputValue);}
-	if (letters(inputValue) % 19 === 0) {var harf = letters(inputValue) + " = 19 × " + letters(inputValue)/19;}else{var harf = letters(inputValue);}
-	if (words(inputValue) % 19 === 0) {var kelime = words(inputValue) + " = 19 × " + words(inputValue)/19;}else{var kelime = words(inputValue);}
+
+	if( abjad(inputValue) ) {
+
+if (abjad(inputValue) % 19 === 0) {ebced = abjad(inputValue) + " = 19 × " + abjad(inputValue)/19}else{ebced = abjad(inputValue)}
+if (letters(inputValue) % 19 === 0) {harf = letters(inputValue) + " = 19 × " + letters(inputValue)/19}else{harf = letters(inputValue)}
+if (words(inputValue) % 19 === 0) {kelime = words(inputValue) + " = 19 × " + words(inputValue)/19}else{kelime = words(inputValue)}
+
+if (ا(inputValue) % 19 === 0) {ا = ا(inputValue) + " = 19 × " + ا(inputValue)/19}else{ا = ا(inputValue)}
+if (ب(inputValue) % 19 === 0) {ب = ب(inputValue) + " = 19 × " + ب(inputValue)/19}else{ب = ب(inputValue)}
+if (ج(inputValue) % 19 === 0) {ج = ج(inputValue) + " = 19 × " + ج(inputValue)/19}else{ج = ج(inputValue)}
+if (د(inputValue) % 19 === 0) {د = د(inputValue) + " = 19 × " + د(inputValue)/19}else{د = د(inputValue)}
+if (ه(inputValue) % 19 === 0) {ه = ه(inputValue) + " = 19 × " + ه(inputValue)/19}else{ه = ه(inputValue)}
+if (و(inputValue) % 19 === 0) {و = و(inputValue) + " = 19 × " + و(inputValue)/19}else{و = و(inputValue)}
+if (ز(inputValue) % 19 === 0) {ز = ز(inputValue) + " = 19 × " + ز(inputValue)/19}else{ز = ز(inputValue)}
+if (ح(inputValue) % 19 === 0) {ح = ح(inputValue) + " = 19 × " + ح(inputValue)/19}else{ح = ح(inputValue)}
+if (ط(inputValue) % 19 === 0) {ط = ط(inputValue) + " = 19 × " + ط(inputValue)/19}else{ط = ط(inputValue)}
+if (ی(inputValue) % 19 === 0) {ی = ی(inputValue) + " = 19 × " + ی(inputValue)/19}else{ی = ی(inputValue)}
+if (ک(inputValue) % 19 === 0) {ک = ک(inputValue) + " = 19 × " + ک(inputValue)/19}else{ک = ک(inputValue)}
+if (ل(inputValue) % 19 === 0) {ل = ل(inputValue) + " = 19 × " + ل(inputValue)/19}else{ل = ل(inputValue)}
+if (م(inputValue) % 19 === 0) {م = م(inputValue) + " = 19 × " + م(inputValue)/19}else{م = م(inputValue)}
+if (ن(inputValue) % 19 === 0) {ن = ن(inputValue) + " = 19 × " + ن(inputValue)/19}else{ن = ن(inputValue)}
+if (س(inputValue) % 19 === 0) {س = س(inputValue) + " = 19 × " + س(inputValue)/19}else{س = س(inputValue)}
+if (ع(inputValue) % 19 === 0) {ع = ع(inputValue) + " = 19 × " + ع(inputValue)/19}else{ع = ع(inputValue)}
+if (ف(inputValue) % 19 === 0) {ف = ف(inputValue) + " = 19 × " + ف(inputValue)/19}else{ف = ف(inputValue)}
+if (ص(inputValue) % 19 === 0) {ص = ص(inputValue) + " = 19 × " + ص(inputValue)/19}else{ص = ص(inputValue)}
+if (ق(inputValue) % 19 === 0) {ق = ق(inputValue) + " = 19 × " + ق(inputValue)/19}else{ق = ق(inputValue)}
+if (ر(inputValue) % 19 === 0) {ر = ر(inputValue) + " = 19 × " + ر(inputValue)/19}else{ر = ر(inputValue)}
+if (ش(inputValue) % 19 === 0) {ش = ش(inputValue) + " = 19 × " + ش(inputValue)/19}else{ش = ش(inputValue)}
+if (ت(inputValue) % 19 === 0) {ت = ت(inputValue) + " = 19 × " + ت(inputValue)/19}else{ت = ت(inputValue)}
+if (ث(inputValue) % 19 === 0) {ث = ث(inputValue) + " = 19 × " + ث(inputValue)/19}else{ث = ث(inputValue)}
+if (خ(inputValue) % 19 === 0) {خ = خ(inputValue) + " = 19 × " + خ(inputValue)/19}else{خ = خ(inputValue)}
+if (ذ(inputValue) % 19 === 0) {ذ = ذ(inputValue) + " = 19 × " + ذ(inputValue)/19}else{ذ = ذ(inputValue)}
+if (ض(inputValue) % 19 === 0) {ض = ض(inputValue) + " = 19 × " + ض(inputValue)/19}else{ض = ض(inputValue)}
+if (ظ(inputValue) % 19 === 0) {ظ = ظ(inputValue) + " = 19 × " + ظ(inputValue)/19}else{ظ = ظ(inputValue)}
+if (غ(inputValue) % 19 === 0) {غ = غ(inputValue) + " = 19 × " + غ(inputValue)/19}else{غ = غ(inputValue)}
+	
 	$("#abjad").html("ABJAD Value: " + ebced);
 	$("#letters").html("Number of LETTERS: " + harf);
 	$("#words").html("Number of WORDS: " + kelime);
+
 	mesaj = "ABJAD Value: " + ebced + "\n" + "Number of LETTERS: " + harf + "\n" + "Number of WORDS: " + kelime;
+
+	$("#ا").html("Number of Aleph: " + ا);
+	$("#ب").html("Number of Aleph: " + ب);
+	$("#ج").html("Number of Aleph: " + ج);
+	$("#د").html("Number of Aleph: " + د);
+	$("#ه").html("Number of Aleph: " + ه);
+	$("#و").html("Number of Aleph: " + و);
+	$("#ز").html("Number of Aleph: " + ز);
+	$("#ح").html("Number of Aleph: " + ح);
+	$("#ط").html("Number of Aleph: " + ط);
+	$("#ی").html("Number of Aleph: " + ی);
+	$("#ک").html("Number of Aleph: " + ک);
+	$("#ل").html("Number of Aleph: " + ل);
+	$("#م").html("Number of Aleph: " + م);
+	$("#ن").html("Number of Aleph: " + ن);
+	$("#س").html("Number of Aleph: " + س);
+	$("#ع").html("Number of Aleph: " + ع);
+	$("#ف").html("Number of Aleph: " + ف);
+	$("#ص").html("Number of Aleph: " + ص);
+	$("#ق").html("Number of Aleph: " + ق);
+	$("#ر").html("Number of Aleph: " + ر);
+	$("#ش").html("Number of Aleph: " + ش);
+	$("#ت").html("Number of Aleph: " + ت);
+	$("#ث").html("Number of Aleph: " + ث);
+	$("#خ").html("Number of Aleph: " + خ);
+	$("#ذ").html("Number of Aleph: " + ذ);
+	$("#ض").html("Number of Aleph: " + ض);
+	$("#ظ").html("Number of Aleph: " + ظ);
+	$("#غ").html("Number of Aleph: " + غ);
 }else{
 	$("#abjad").html("");
 	$("#letters").html("");
