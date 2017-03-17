@@ -164,7 +164,8 @@ function ا(string) {
 	ﻹ = string.match(/[ﻹ]/igm).length;
 	ﻷ = string.match(/[ﻷ]/igm).length;
 	ﻵ = string.match(/[ﻵ]/igm).length;
-	return string.match(/[ءاآٱأإ]/igm).length + ﻻ + ﻹ + ﻷ + ﻵ
+	ا = string.match(/[ءاآٱأإ]/igm).length;
+	return ا + ﻻ + ﻹ + ﻷ + ﻵ
 }
 function ب(string) { return string.match(/[بپ]/igm).length }
 function ج(string) { return string.match(/[جچ]/igm).length }
@@ -181,7 +182,8 @@ function ل(string) {
 	ﻹ = string.match(/[ﻹ]/igm).length;
 	ﻷ = string.match(/[ﻷ]/igm).length;
 	ﻵ = string.match(/[ﻵ]/igm).length;
-	return string.match(/[ل]/igm).length + ﻻ + ﻹ + ﻷ + ﻵ
+	ل = string.match(/[ل]/igm).length;
+	return ل + ﻻ + ﻹ + ﻷ + ﻵ
 }
 function م(string) { return string.match(/[م]/igm).length }
 function ن(string) { return string.match(/[ن]/igm).length }
